@@ -34,4 +34,5 @@ public class BookingDetails {
     public String getCardNo() {
         return cardNo;
     }
+
 }

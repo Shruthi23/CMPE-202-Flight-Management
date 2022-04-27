@@ -1,5 +1,8 @@
 package test.validation;
 
+import test.Output;
+import test.OutputFile;
+
 public abstract class CardValidator {
     private CardValidator cardValidator;
     private static String res="";
@@ -7,6 +10,7 @@ public abstract class CardValidator {
         this.cardValidator=cardValidator;
     }
     public void validate(String cardNum){
+        System.out.println("cardvalidator   "+cardValidator);
         if(cardValidator!=null){
             cardValidator.validate(cardNum);
             //return true;
@@ -15,6 +19,7 @@ public abstract class CardValidator {
             System.out.println("Invalid card");
             res="Invalid card";
             System.out.println("res in else"+ " "+res);
+            //OutputFile.createFile();
            // return false;
         }
     }

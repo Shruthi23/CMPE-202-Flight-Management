@@ -10,6 +10,7 @@ public class VisaCardValidator extends  CardValidator{
             //return true;
         }
         else{
+            System.out.println("super   "+super.getClass());
             super.validate(cardNum);
             //return false;
         }

@@ -14,7 +14,7 @@ public class Chain {
     //chain1=new FlightNumValidator(new FlightSeatValidator(null));
     }
     public void validate(String cardNum){
-        //System.out.println("chain-->"+chain);
+        System.out.println("chain-->"+chain);
         chain.validate(cardNum);
         //return flag;
     }

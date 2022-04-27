@@ -27,6 +27,7 @@ public class RunClient {
          runClient.insertFlightData();
          runClient.insertBookingDetails();
          ArrayList<Flights> data=  FlightList.getInstance().getList();
+
          ArrayList<BookingDetails> bookingDetails=SingletonBookingList.getInstance().getList();
 //         data.forEach(ele->{
 //          System.out.println("ele flight   "+ele.getFlightNum());

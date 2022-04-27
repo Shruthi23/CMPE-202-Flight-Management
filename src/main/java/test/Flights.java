@@ -41,4 +41,8 @@ public class Flights {
     public int getPrice() {
         return price;
     }
+    public void setSeats( int seats){
+        noOfSeats=noOfSeats-seats;
+
+    }
 }
