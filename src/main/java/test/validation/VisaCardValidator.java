@@ -7,9 +7,11 @@ public class VisaCardValidator extends  CardValidator{
     public void validate(String cardNum){
         if(cardNum.startsWith("4") && (cardNum.length()==13 || cardNum.length()==16)){
             System.out.println("validate Visa");
+            //return true;
         }
         else{
             super.validate(cardNum);
+            //return false;
         }
 
     }

@@ -8,7 +8,7 @@ public class MasterCardValidator extends CardValidator{
         super(cardValidator);
     }
     public void validate(String cardNum){
-        String regexStr = "[0-9]+";
+        String regexStr = "[1-5]+";
         String sec= String.valueOf(cardNum.charAt(1));
         Pattern pattern=Pattern.compile(regexStr);
         Matcher matcher=pattern.matcher(sec);
@@ -16,9 +16,11 @@ public class MasterCardValidator extends CardValidator{
         System.out.println("res"+res);
         if(cardNum.startsWith("5") && cardNum.length()==16 && res ){
             System.out.println("validate master");
+            //return true;
         }
         else{
             super.validate(cardNum);
+            //return false;
         }
 
     }
