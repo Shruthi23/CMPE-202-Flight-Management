@@ -14,7 +14,13 @@ public class OutputFactory {
         }
         else{
             CSVFileOutput csvFileOutput=new CSVFileOutput();
-            csvFileOutput.createOutput(output,name,res);
+            try {
+                csvFileOutput.createOutput(output, name, res);
+            }
+            catch (IOException e){
+                e.printStackTrace();
+            }
+
         }
 
 

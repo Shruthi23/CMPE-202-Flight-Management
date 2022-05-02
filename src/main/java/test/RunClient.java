@@ -7,6 +7,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.lang.reflect.Array;
+import java.nio.file.Path;
 import java.security.KeyPair;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,6 +28,8 @@ public class RunClient {
          runClient.insertFlightData();
          runClient.insertBookingDetails();
          ArrayList<Flights> data=  FlightList.getInstance().getList();
+        String cwd = Path.of("").toAbsolutePath().toString();
+         System.out.println("current directory"+cwd);
 
          ArrayList<BookingDetails> bookingDetails=SingletonBookingList.getInstance().getList();
 //         data.forEach(ele->{

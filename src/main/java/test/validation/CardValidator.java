@@ -27,4 +27,7 @@ public abstract class CardValidator {
         System.out.println("res in getRes"+ " "+res);
         return res;
     }
+    public int sum(int a,int b){
+        return a+b;
+    }
 }

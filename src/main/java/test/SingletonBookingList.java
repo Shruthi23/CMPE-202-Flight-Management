@@ -1,6 +1,7 @@
 package test;
 
 import test.output.OutputFactory;
+import test.validation.CardValidator;
 import test.validation.Chain;
 import test.validation.FlightNumValidator;
 
@@ -75,6 +76,7 @@ public class SingletonBookingList {
             }
         }
     }
+
 
 
 
