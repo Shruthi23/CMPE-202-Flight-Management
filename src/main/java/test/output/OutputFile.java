@@ -5,9 +5,10 @@ import test.Output;
 public abstract class OutputFile {
 
 
-    public void createOutput(Output output,String name,String reason){
+    public void createOut(Output output,String name,String reason){
 
 
     }
+
 
 }

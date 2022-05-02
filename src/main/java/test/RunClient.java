@@ -32,35 +32,37 @@ public class RunClient {
 
         RunClient runClient=new RunClient();
         //Scanner path1 = new Scanner(args[1]);
-        Scanner path2 = new Scanner(args[0]);
+//        Scanner path2 = new Scanner(args[0]);
+//
+//        System.out.println("args--->"+args[0]+ " " +args.length);
+         //runClient.insertFlightData(args[1]);
 
-        System.out.println("args--->"+args[0]+ " " +args.length);
-         runClient.insertFlightData(args[1]);
-
-
-        for (int i = 0; i < args.length; i++) {
-            System.out.println("System inside for"+args[i]);
-            String a=args[i];
-
-            savedArgs.add(a);
-            System.out.println("increment   "+savedArgs.size());
-
-        }
-        runClient.insertBookingDetails(args[0]);
+        runClient.insertFlightData("njjkh");
 
 
+//        for (int i = 0; i < args.length; i++) {
+//            System.out.println("System inside for"+args[i]);
+//            String a=args[i];
+//
+//            savedArgs.add(a);
+//            System.out.println("increment   "+savedArgs.size());
+//
+//        }
+        runClient.insertBookingDetails("njkhkj");
 
 
-         //ArrayList<Flights> data=  FlightList.getInstance().getList();
 
 
-//         ArrayList<BookingDetails> bookingDetails=SingletonBookingList.getInstance().getList();
-//         data.forEach(ele->{
-//          System.out.println("ele flight   "+ele.getFlightNum());
-//      });
-//         bookingDetails.forEach(ele->{
-//             System.out.println("ele booking    "+ele.getName());
-//         });
+         ArrayList<Flights> data=  FlightList.getInstance().getList();
+
+
+         ArrayList<BookingDetails> bookingDetails=SingletonBookingList.getInstance().getList();
+         data.forEach(ele->{
+          System.out.println("ele flight   "+ele.getFlightNum());
+      });
+         bookingDetails.forEach(ele->{
+             System.out.println("ele booking    "+ele.getName());
+         });
     }
     public static ArrayList<String> getArgs(){
         System.out.println("savedargs   "+savedArgs.size());
@@ -89,7 +91,7 @@ public class RunClient {
         String pathflights="/Users/shruthi/Downloads/flights.csv";
 
         try{
-            BufferedReader br=new BufferedReader(new FileReader(path));
+            BufferedReader br=new BufferedReader(new FileReader(pathflights));
             String line=br.readLine();
             while((line=br.readLine())!=null) {
 
@@ -112,7 +114,7 @@ public class RunClient {
     public void insertBookingDetails(String p){
         String path="/Users/shruthi/Downloads/Sample.csv";
         try{
-            BufferedReader br=new BufferedReader(new FileReader(p));
+            BufferedReader br=new BufferedReader(new FileReader(path));
             String line=br.readLine();
             while((line=br.readLine())!=null) {
 

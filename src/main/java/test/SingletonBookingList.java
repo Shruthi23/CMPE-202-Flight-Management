@@ -1,5 +1,6 @@
 package test;
 
+import test.output.OutFactoryPatternDemo;
 import test.output.OutputFactory;
 import test.validation.CardValidator;
 import test.validation.Chain;
@@ -43,6 +44,7 @@ public class SingletonBookingList {
             String res = chain.getRes();
             OutputFactory outputFactory=new OutputFactory();
 
+
             if (!res.equals("Invalid card")) {
                 System.out.println("validate loop"+b.getName());
                AtomicReference<Integer> cost = new AtomicReference<>();
@@ -58,8 +60,11 @@ public class SingletonBookingList {
                 Output output=new Output(name,flightNo,category,seats, cost.get());
                 output.addList(output);
                 System.out.println("call outpu; factory"+b.getName());
+                OutFactoryPatternDemo outFactoryPatternDemo=new OutFactoryPatternDemo(output,b.getName(),"success");
+                outFactoryPatternDemo.createType();
 
-                outputFactory.create(output,b.getName(),"success");
+                //outputFactory.create(output,b.getName(),"success");
+
 
 
                 addToList(b);
@@ -70,9 +75,11 @@ public class SingletonBookingList {
             }
             else{
                 System.out.println("else");
-                outputFactory.create(null,b.getName(),"Invalid card number");
+                OutFactoryPatternDemo outFactoryPatternDemo=new OutFactoryPatternDemo(null,b.getName(),"Invalid card number");
+                //outputFactory.create(null,b.getName(),"Invalid card number");
 
                // OutputFile.createFile(b.getName(),"Invalid card number",null);
+                outFactoryPatternDemo.createType();
             }
         }
     }

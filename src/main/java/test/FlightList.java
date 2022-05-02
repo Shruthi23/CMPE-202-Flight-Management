@@ -22,7 +22,7 @@ public class FlightList {
     public ArrayList<Flights> getList(){
         return (ArrayList<Flights>) flightInfo;
     }
-    public void addToList(Flights f){
+    public  void addToList(Flights f){
         flightInfo.add(f);
 
     }

@@ -4,6 +4,7 @@ import test.BookingDetails;
 import test.FlightList;
 import test.Flights;
 import test.OutputFile;
+import test.output.OutFactoryPatternDemo;
 import test.output.OutputFactory;
 
 import java.io.File;
@@ -79,8 +80,10 @@ public class FlightNumValidator   {
      if(!flag[0]){
          //File obj=new File("output.txt");
         // OutputFile.createFile(b.getName(),"Invalid flight number");
-         OutputFactory outputFactory=new OutputFactory();
-         outputFactory.create(null,b.getName(),"Invalid flight number");
+        // OutputFactory outputFactory=new OutputFactory();
+         OutFactoryPatternDemo outFactoryPatternDemo=new OutFactoryPatternDemo(null,b.getName(),"Invalid flight number");
+         //outputFactory.create(null,b.getName(),"Invalid flight number");
+         outFactoryPatternDemo.createType();
 
          System.out.println("No flight number");
      }

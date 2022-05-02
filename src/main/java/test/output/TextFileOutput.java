@@ -12,24 +12,34 @@ import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 
-public class TextFileOutput extends OutputFile {
-    public void createOutput(Output o,String name,String reason) throws IOException {
-        ArrayList<String> saved=RunClient.getArgs();
-  System.out.println("args in file"+saved.get(2));
-   String p=saved.get(3);
-        File file=new File(p);
+public class TextFileOutput extends OutputFile implements  FileType {
+
+
+    public void createOutput(Output o,String name,String reason) {
+        //ArrayList<String> saved=RunClient.getArgs();
+  //System.out.println("args in file"+saved.get(2));
+  // String p=saved.get(3);
+        File file=new File("output.text");
         Path path=Path.of(String.valueOf(file));
         final String NEW_LINE = System.lineSeparator();
         String content="Please enter correct booking details for  "+name +" "+":  "+reason+NEW_LINE;
         if(!file.exists()){
-            Files.writeString(path,content);
+            try {
+                Files.writeString(path,content);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
 
         }
         else{
 
-            Files.write(path, content.getBytes(StandardCharsets.UTF_8),
-                    StandardOpenOption.CREATE,
-                    StandardOpenOption.APPEND);
+            try {
+                Files.write(path, content.getBytes(StandardCharsets.UTF_8),
+                        StandardOpenOption.CREATE,
+                        StandardOpenOption.APPEND);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
 
 
         }
