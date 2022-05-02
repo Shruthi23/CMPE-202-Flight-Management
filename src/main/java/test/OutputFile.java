@@ -10,6 +10,7 @@ import java.nio.file.StandardOpenOption;
 public class OutputFile {
 
     public static void createFile(String name,String reason) throws IOException {
+        System.out.println("pathhhh");
         File file=new File("output.text");
         Path path=Path.of(String.valueOf(file));
         final String NEW_LINE = System.lineSeparator();
