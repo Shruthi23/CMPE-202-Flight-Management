@@ -3,14 +3,10 @@ package test.validation;
 import test.BookingDetails;
 import test.FlightList;
 import test.Flights;
-import test.OutputFile;
 import test.output.OutFactoryPatternDemo;
-import test.output.OutputFactory;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.stream.Stream;
 
 public class FlightNumValidator   {
     public FlightNumValidator() {

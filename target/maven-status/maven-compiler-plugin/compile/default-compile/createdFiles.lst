@@ -6,9 +6,6 @@ test/output/OutputFactory.class
 test/output/CSVFileOutput.class
 test/output/OutFactoryPatternDemo.class
 test/SingletonBookingList.class
-test/output/OutputFile.class
-test/OutputFile.class
-test/validation/FlightSeatValidator.class
 test/BookingDetails.class
 test/validation/FlightValidator.class
 test/validation/AmexCardValidator.class

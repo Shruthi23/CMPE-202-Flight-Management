@@ -3,10 +3,8 @@
 /Users/shruthi/IdeaProjects/CMPE202FlightManagement/src/main/java/test/validation/FlightCategoryValidator.java
 /Users/shruthi/IdeaProjects/CMPE202FlightManagement/src/main/java/test/validation/AmexCardValidator.java
 /Users/shruthi/IdeaProjects/CMPE202FlightManagement/src/main/java/test/output/OutFactoryPatternDemo.java
-/Users/shruthi/IdeaProjects/CMPE202FlightManagement/src/main/java/test/OutputFile.java
 /Users/shruthi/IdeaProjects/CMPE202FlightManagement/src/main/java/test/validation/MasterCardValidator.java
 /Users/shruthi/IdeaProjects/CMPE202FlightManagement/src/main/java/test/output/OutputFactory.java
-/Users/shruthi/IdeaProjects/CMPE202FlightManagement/src/main/java/test/validation/FlightSeatValidator.java
 /Users/shruthi/IdeaProjects/CMPE202FlightManagement/src/main/java/test/SingletonBookingList.java
 /Users/shruthi/IdeaProjects/CMPE202FlightManagement/src/main/java/test/validation/Chain.java
 /Users/shruthi/IdeaProjects/CMPE202FlightManagement/src/main/java/test/RunClient.java
@@ -20,4 +18,3 @@
 /Users/shruthi/IdeaProjects/CMPE202FlightManagement/src/main/java/test/validation/CardValidator.java
 /Users/shruthi/IdeaProjects/CMPE202FlightManagement/src/main/java/test/output/CSVFileOutput.java
 /Users/shruthi/IdeaProjects/CMPE202FlightManagement/src/main/java/test/Flights.java
-/Users/shruthi/IdeaProjects/CMPE202FlightManagement/src/main/java/test/output/OutputFile.java

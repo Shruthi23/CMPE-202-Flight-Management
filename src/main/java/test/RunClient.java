@@ -37,18 +37,18 @@ public class RunClient {
 //        System.out.println("args--->"+args[0]+ " " +args.length);
          //runClient.insertFlightData(args[1]);
 
-        runClient.insertFlightData("njjkh");
+        runClient.insertFlightData(args[1]);
 
 
-//        for (int i = 0; i < args.length; i++) {
-//            System.out.println("System inside for"+args[i]);
-//            String a=args[i];
-//
-//            savedArgs.add(a);
-//            System.out.println("increment   "+savedArgs.size());
-//
-//        }
-        runClient.insertBookingDetails("njkhkj");
+        for (int i = 0; i < args.length; i++) {
+            System.out.println("System inside for"+args[i]);
+            String a=args[i];
+
+            savedArgs.add(a);
+            System.out.println("increment   "+savedArgs.size());
+
+        }
+        runClient.insertBookingDetails(args[0]);
 
 
 
@@ -91,7 +91,7 @@ public class RunClient {
         String pathflights="/Users/shruthi/Downloads/flights.csv";
 
         try{
-            BufferedReader br=new BufferedReader(new FileReader(pathflights));
+            BufferedReader br=new BufferedReader(new FileReader(path));
             String line=br.readLine();
             while((line=br.readLine())!=null) {
 
@@ -114,7 +114,7 @@ public class RunClient {
     public void insertBookingDetails(String p){
         String path="/Users/shruthi/Downloads/Sample.csv";
         try{
-            BufferedReader br=new BufferedReader(new FileReader(path));
+            BufferedReader br=new BufferedReader(new FileReader(p));
             String line=br.readLine();
             while((line=br.readLine())!=null) {
 

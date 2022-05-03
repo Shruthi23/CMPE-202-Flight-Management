@@ -1,7 +1,6 @@
 package test.output;
 
 import test.Output;
-import test.OutputFile;
 import com.opencsv.CSVWriter;
 import test.RunClient;
 
@@ -10,20 +9,24 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class CSVFileOutput extends OutputFile implements FileType {
+public class CSVFileOutput  implements FileType {
 
     //String[] args= RunClient.getArgs();
 
    // String p=args[2];
    ArrayList<String> saved=RunClient.getArgs();
 
-    //String p=saved.get(2);
+   // System.out.println("CSV FILE");
+
+    String p=saved.get(2);
+    
+
     public void createOutput(Output o,String name,String reason) {
         System.out.println("CSV FILE");
 
 
         //CSVWriter csvWriter=new CSVWriter(new FileWriter("output.csv"));
-        File file = new File("output.csv");
+        File file = new File(p);
 
         if (file.exists()) {
             System.out.println("do nothing");
@@ -31,7 +34,7 @@ public class CSVFileOutput extends OutputFile implements FileType {
 
             CSVWriter writer = null;
             try {
-                writer = new CSVWriter(new FileWriter("output.csv", true));
+                writer = new CSVWriter(new FileWriter(p, true));
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -49,7 +52,7 @@ public class CSVFileOutput extends OutputFile implements FileType {
         } else {
             CSVWriter writer = null;
             try {
-                writer = new CSVWriter(new FileWriter("output.csv"));
+                writer = new CSVWriter(new FileWriter(p));
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

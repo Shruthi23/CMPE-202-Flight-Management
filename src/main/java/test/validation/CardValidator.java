@@ -1,11 +1,8 @@
 package test.validation;
 
-import test.Output;
-import test.OutputFile;
-
 public abstract class CardValidator {
     private CardValidator cardValidator;
-    private static String res="";
+    private static String res="Success";
     public CardValidator(CardValidator cardValidator){
         this.cardValidator=cardValidator;
     }
